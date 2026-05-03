@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 
 const userschema = new mongoose.Schema({
-    fullname: {
+    name: {
         type: String,
         required: true,
     },
@@ -27,7 +27,6 @@ const userschema = new mongoose.Schema({
 
         number: {
             type: Number,
-            required: true
         }
     },
     phoneVerified: {
