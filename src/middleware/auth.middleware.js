@@ -9,6 +9,13 @@ export const authMiddleware = (req, res, next) => {
         message: "Token missing"
       })
     }
+    const isBlacklisted = await Blacklist.findOne({ token })
+    if (isBlacklisted) {
+      return res.status(401).json({
+        status: false,
+        message: "Session expired (logged out)"
+      })
+    }
     const decoded = jwt.verify(token, process.env.JWT_SECRET)
     req.user = decoded
     next()

@@ -1,8 +1,14 @@
 import mongoose from "mongoose"
 
 const blacklistSchema = new mongoose.Schema({
-  token: String,
-  expiresAt: Date
-})
+    token:{
+        type:String,
+        require:[true, "token is Required to add in blacklist"]
+    }
+},
+{timestamps:true}
+)
 
-export default mongoose.model("Blacklist", blacklistSchema)
+
+const Blacklist  = mongoose.model('Blacklist',blacklistSchema)
+export default Blacklist
