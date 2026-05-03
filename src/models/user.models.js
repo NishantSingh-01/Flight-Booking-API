@@ -1,6 +1,4 @@
 import mongoose from "mongoose"
-
-
 const userschema = new mongoose.Schema({
     name: {
         type: String,
@@ -35,9 +33,9 @@ const userschema = new mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ["USER", 'ADMIN', 'AGENT'],
-        default: "USER"
-    },
+        enum: ["PATIENT", 'DOCTOR', ''],
+        default: "PATIENT"
+    }
 
 },
     { timestamps: true }

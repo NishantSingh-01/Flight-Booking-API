@@ -12,5 +12,5 @@ app.listen(process.env.PORT ||4000, () => {
 })
 
 app.get('/api/v1', (_, res) => {
-    res.send(`<h1 style="color: blue; text-align: center;">Welcome to the API <span style="color: red;">Flight Booking App</span></h1>`)
+    res.send(`<h1 style="color: blue; text-align: center;">Welcome to the API <span style="color: red;">Health-Up App</span></h1>`)
 })

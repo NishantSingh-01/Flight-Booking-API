@@ -1,1 +1,1 @@
-export const DB_NAME ="FlightBookingApi"
+export const DB_NAME ="HealthUpApi"
