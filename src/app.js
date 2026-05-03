@@ -20,6 +20,6 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 import router from './routes/user.route.js'
-app.use('/auth',router)
+app.use('/api/v1/auth',router)
 
 export default app
